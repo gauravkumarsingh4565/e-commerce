@@ -1,0 +1,177 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 20px;
+    background-color: white;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif; 
+  }
+  .ecom{
+    font-weight:600;
+    font-size:50px;
+    font-style:oblique;
+    color:#2874f0;
+    /* margin-bottom: 10px; */
+  }
+  .logo-section {
+    display: flex;
+    align-items: center;
+    margin-left: 200px;
+  }
+  
+  .logo {
+    width: 80px;
+    object-fit: contain;
+  }
+  
+  .plus-text {
+    margin-left: -10px;
+    font-size: 12px;
+    color: #878787;
+  }
+  
+  .explore {
+    font-weight:500;
+    font-size:30px;
+    margin-left: 10px;
+  }
+  
+  .plus {
+    color: #f9a825;
+    font-weight: 400;
+    font-size: 20px;
+    margin-left: 5px;
+
+  }
+  
+  .plus-icon {
+    vertical-align: middle;
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #f0f5ff;
+    padding: 5px 10px;
+    border-radius: 25px;
+    width: 800px;
+    margin-right: 100px;
+  }
+  
+  .search-bar input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding-left: 8px;
+    font-size: 30px;
+    background: transparent;
+  }
+  
+  .search-icon {
+    color: #2874f0;
+    font-size:30px;
+    margin-left: 10px;
+    margin-right: 8px;
+  }
+  
+  /* Right section should be horizontal */
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  font-size: 26px;
+  margin-right: 100px;
+}
+
+/* Nav item in row, vertically centered */
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  color: #212121;
+}
+
+/* User info (name + logout) in a row */
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Optional: Slightly bold name */
+.user-info span {
+  font-weight: 600;
+  color: #2874f0;
+  
+}
+
+/* Logout button styling */
+.logout-button {
+  font-size: 14px;
+  color: #ff3b3b;
+  /* background: none; */
+  /* border: none; */
+  cursor: pointer;
+  padding: 5;
+  
+  /* text-decoration: underline; */
+}
+
+/* Hover effect */
+.logout-button:hover {
+  color: #d10000;
+  text-decoration: none;
+}
+.confirm-dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.dialog-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.dialog-box p {
+  margin-bottom: 15px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.dialog-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.dialog-actions button {
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.dialog-actions button:first-child {
+  background-color: #d9534f;
+  color: #fff;
+}
+
+.dialog-actions button:last-child {
+  background-color: #6c757d;
+  color: #fff;
+}
