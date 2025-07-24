@@ -3,14 +3,16 @@ import React from "react";
 import mobileData from "../mobileJsonData";
 import "./MobileDetails.css"
 import Navbar from "../Dashboard/navbar";
+import Category from "../Category/category";
 
 const MobileDetailPage = () => {
-    console.log("mobileData",mobileData);
+   
     
  
     return (
       <>
         <Navbar/>
+        <Category/>
         <div className="mobile-list">
           <h2>Mobile Products</h2>
           <div className="mobile-grid">

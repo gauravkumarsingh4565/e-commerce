@@ -25,7 +25,6 @@ const Login = () => {
         const userData = snapshot.val();
         console.log("User Details:", userData);
 
-        // ✅ Optionally store in state or localStorage
         localStorage.setItem("user", JSON.stringify(userData));
 
         alert(`Welcome ${userData.name}!`);

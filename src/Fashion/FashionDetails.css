@@ -1,0 +1,62 @@
+.fashion-container {
+    padding: 20px;
+    /* max-width: 1200px; */
+    margin: auto;
+    font-family: Arial, sans-serif;
+   
+  }
+  
+  .fashion-section {
+    margin-bottom: 20px;
+  }
+  
+  .fashion-section h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .fashion-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .fashion-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background-color: #fff;
+  }
+  
+  .fashion-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .fashion-image {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+  }
+  
+  .fashion-title {
+    font-size: 14px;
+    margin: 10px 0;
+    color: #555;
+    height: 40px;
+    overflow: hidden;
+  }
+  
+  .fashion-price {
+    color: #e91e63;
+    font-weight: bold;
+  }
+  
+  .loading-text {
+    text-align: center;
+    font-size: 18px;
+    padding: 40px;
+    color: #666;
+  }
+  

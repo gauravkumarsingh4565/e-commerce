@@ -8,9 +8,9 @@ const Category = () => {
   const categories = [
     { name: "Mobiles", img: "https://img.icons8.com/color/96/iphone.png", route: "/mobileDetails" },
     { name: "Electronics", img: "https://img.icons8.com/color/96/laptop.png", route: "/electronics" },
-    { name: "Fashion", img: "https://img.icons8.com/color/96/t-shirt.png", route: "/" },
-    { name: "Food", img: "https://img.icons8.com/color/96/hamburger.png", route: "/" },
-    { name: "Toys", img: "https://img.icons8.com/color/96/teddy-bear.png", route: "/" }
+    { name: "Fashion", img: "https://img.icons8.com/color/96/t-shirt.png", route: "/fashion" },
+    { name: "Food", img: "https://img.icons8.com/color/96/hamburger.png", route: "/foods" },
+    { name: "Toys", img: "https://img.icons8.com/color/96/teddy-bear.png", route: "/toyes" }
   ];
 
   const handleCategoryClick = (route) => {
