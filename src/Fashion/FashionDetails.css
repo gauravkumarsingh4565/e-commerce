@@ -1,62 +1,91 @@
 .fashion-container {
-    padding: 20px;
-    /* max-width: 1200px; */
-    margin: auto;
-    font-family: Arial, sans-serif;
-   
-  }
-  
-  .fashion-section {
-    margin-bottom: 20px;
-  }
-  
-  .fashion-section h2 {
-    margin-bottom: 20px;
-    color: #333;
-  }
-  
+  padding: 20px;
+}
+
+
+.fashion-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
+  gap: 20px;
+  margin-bottom:40px ;
+}
+
+
+.fashion-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+  transition: box-shadow 0.3s ease;
+}
+
+.fashion-card:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+.fashion-image {
+  max-width: 100%;
+  height: 180px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.fashion-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.fashion-price {
+  font-size: 18px;
+  color: #e91e63;
+  font-weight: bold;
+}
+
+
+@media (max-width: 768px) {
   .fashion-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); 
+    gap: 15px;
   }
-  
+
   .fashion-card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 10px;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    background-color: #fff;
+    padding: 15px;
   }
-  
-  .fashion-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  }
-  
+
   .fashion-image {
-    width: 100%;
-    height: 200px;
-    object-fit: contain;
+    height: 150px;
   }
-  
+
   .fashion-title {
     font-size: 14px;
-    margin: 10px 0;
-    color: #555;
-    height: 40px;
-    overflow: hidden;
   }
-  
+
   .fashion-price {
-    color: #e91e63;
-    font-weight: bold;
+    font-size: 16px;
   }
-  
-  .loading-text {
-    text-align: center;
-    font-size: 18px;
-    padding: 40px;
-    color: #666;
+}
+
+@media (max-width: 480px) {
+  .fashion-grid {
+    grid-template-columns: 1fr; 
   }
-  
+
+  .fashion-card {
+    padding: 12px;
+  }
+
+  .fashion-image {
+    height: 140px;
+  }
+
+  .fashion-title {
+    font-size: 14px;
+  }
+
+  .fashion-price {
+    font-size: 15px;
+  }
+}
