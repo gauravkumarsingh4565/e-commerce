@@ -6,16 +6,13 @@ import Category from "../Category/category";
 const FashionDetails = () => {
   const [mensClothing, setMensClothing] = useState([]);
   const [womensClothing, setWomensClothing] = useState([]);
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const [menRes, womenRes] = await Promise.all([
           fetch("https://fakestoreapi.com/products/category/men's%20clothing"),
-          fetch(
-            "https://fakestoreapi.com/products/category/women's%20clothing"
-          ),
+          fetch("https://fakestoreapi.com/products/category/women's%20clothing"),
         ]);
 
         const [menData, womenData] = await Promise.all([
@@ -27,15 +24,12 @@ const FashionDetails = () => {
         setWomensClothing(womenData);
       } catch (error) {
         console.error("Error fetching fashion data:", error);
-      } finally {
-        setLoading(false);
       }
     };
 
     fetchData();
-  }, []);
-
-  if (loading) return <p className="loading-text">Loading fashion items...</p>;
+  }, []); 
+  
 
   return (
     <>

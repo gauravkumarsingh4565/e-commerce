@@ -3,8 +3,7 @@ import "./signup.css";
 import { useNavigate } from "react-router-dom";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { getDatabase, ref, set } from "firebase/database";
-// import { getFirestore, doc, setDoc } from "firebase/firestore";
-import  app  from "../firebase"
+import app from "../firebase";
 
 const auth = getAuth(app);
 const database = getDatabase(app);
@@ -28,7 +27,7 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-    
+      
       const userCredential = await createUserWithEmailAndPassword(
         auth,
         formData.email,
@@ -36,20 +35,15 @@ const Signup = () => {
       );
       const user = userCredential.user;
 
+      
       await set(ref(database, "users/" + user.uid), {
         name: formData.name,
         mobile: formData.mobile,
         email: formData.email,
         gender: formData.gender,
         uid: user.uid,
-        password:formData.password
+        password:formData?.password
       });
-
-      // ✅ (Optional) Save in Firestore instead
-      // await setDoc(doc(firestore, "users", user.uid), {
-      //   ...formData,
-      //   uid: user.uid,
-      // });
 
       alert("Account created successfully!");
       navigate("/"); 
@@ -58,7 +52,6 @@ const Signup = () => {
       alert(error.message);
     }
   };
-console.log("formData",formData);
 
   return (
     <div className="signup-container">
@@ -81,6 +74,7 @@ console.log("formData",formData);
             name="mobile"
             value={formData.mobile}
             placeholder="Enter mobile number"
+            pattern="[0-9]{10}"  
             onChange={handleChange}
             required
           />
