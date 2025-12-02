@@ -1,3 +1,4 @@
+/* ---------------- NAVBAR MAIN ---------------- */
 .navbar {
   display: flex;
   align-items: center;
@@ -5,232 +6,209 @@
   padding: 8px 20px;
   background-color: white;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-  font-family: Arial, sans-serif; 
+  font-family: Arial, sans-serif;
+  width: 100%;
+}
+
+/* ---------------- LOGO SECTION ---------------- */
+.logo-section {
+  display: flex;
+  align-items: center;
 }
 
 .ecom {
   font-weight: 600;
-  font-size: 50px;
-  font-style: oblique;
+  font-size: 28px;
   color: #2874f0;
 }
 
-.logo-section {
-  display: flex;
-  align-items: center;
-  margin-left: 200px;
-}
-
-.logo {
-  width: 80px;
-  object-fit: contain;
-}
-
-.plus-text {
-  margin-left: -10px;
-  font-size: 12px;
-  color: #878787;
-}
-
 .explore {
-  font-weight: 500;
-  font-size: 30px;
-  margin-left: 10px;
+  font-size: 14px;
+  color: #2874f0;
 }
 
 .plus {
-  color: #f9a825;
-  font-weight: 400;
-  font-size: 20px;
-  margin-left: 5px;
+  font-size: 12px;
+  color:#3ab831;
 }
 
 .plus-icon {
-  vertical-align: middle;
+  width: 12px;
+  height: 12px;
 }
 
+/* ---------------- SEARCH BAR ---------------- */
 .search-bar {
   display: flex;
   align-items: center;
   background-color: #f0f5ff;
-  padding: 5px 10px;
   border-radius: 25px;
-  width: 800px;
-  margin-right: 100px;
+  width: 40%;
+  padding: 6px 12px;
 }
 
 .search-bar input {
   width: 100%;
   border: none;
   outline: none;
-  padding-left: 8px;
-  font-size: 30px;
+  font-size: 16px;
   background: transparent;
 }
 
 .search-icon {
   color: #2874f0;
-  font-size: 30px;
-  margin-left: 10px;
+  font-size: 18px;
   margin-right: 8px;
 }
 
-/* Right section */
+/* ---------------- RIGHT SECTION ---------------- */
 .right-section {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 20px;
+}
+
+.cart-icon {
   font-size: 26px;
-  margin-right: 100px;
+  color: #c56a3c;
 }
 
-.nav-item {
-  display: flex;
-  align-items: center;
-  gap: 6px;
+.cart-box {
+  position: relative;
   cursor: pointer;
 }
 
-.user-info {
+.cart-badge {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background: #c56a3c;
+  color: white;
+  font-size: 11px;
+  padding: 2px 5px;
+  font-weight: bold;
+  border-radius: 50%;
+}
+
+/* USER CIRCLE */
+.user-circle {
+  width: 40px;
+  height: 40px;
+  background: #c56a3c;
+  border-radius: 50%;
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 10px;
-}
-
-.user-info span {
-  font-weight: 600;
-  color: #2874f0;
-}
-
-.logout-button {
-  font-size: 14px;
-  color: #ff3b3b;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: lowercase;
   cursor: pointer;
-  padding: 5;
 }
 
-.logout-button:hover {
-  color: #d10000;
-  text-decoration: none;
+/* ---------------- DRAWER ---------------- */
+.drawer {
+  position: fixed;
+  top: 0;
+  right: -350px;
+  width: 300px;
+  height: 100%;
+  background: white;
+  box-shadow: -2px 0 6px rgba(0,0,0,0.2);
+  padding: 20px;
+  transition: 0.3s ease-in-out;
+  z-index: 2000;
 }
 
-/* Confirm dialog */
-.confirm-dialog {
+.drawer.open {
+  right: 0;
+}
+
+.drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-btn {
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.drawer-content {
+  margin-top: 20px;
+}
+
+.logout-btn {
+  margin-top: 20px;
+  width: 100%;
+  padding: 10px;
+  background: #ff5555;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* DARK OVERLAY */
+.overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
+  background: rgba(0,0,0,0.4);
+  z-index: 1500;
 }
 
-.dialog-box {
-  background: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  text-align: center;
-  width: 300px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.dialog-box p {
-  margin-bottom: 15px;
-  font-size: 16px;
-  font-weight: bold;
-}
-
-.dialog-actions {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-}
-
-.dialog-actions button {
-  padding: 8px 16px;
-  border: none;
-  cursor: pointer;
-  font-size: 14px;
-  border-radius: 4px;
-}
-
-.dialog-actions button:first-child {
-  background-color: #d9534f;
-  color: #fff;
-}
-
-.dialog-actions button:last-child {
-  background-color: #6c757d;
-  color: #fff;
-}
-
-/* ✅ Responsive CSS */
-
-/* For Tablets */
-@media (max-width: 1024px) {
-  .logo-section {
-      margin-left: 50px;
-  }
-  .search-bar {
-      width: 500px;
-      margin-right: 50px;
-  }
-  .right-section {
-      font-size: 22px;
-      margin-right: 50px;
-  }
-}
-
-/* For Mobiles */
+/* ---------------- MOBILE RESPONSIVE ---------------- */
 @media (max-width: 768px) {
-  .navbar {
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 10px;
-  }
-  .logo-section {
-      margin-left: 0;
-      justify-content: center;
-      width: 100%;
-      margin-bottom: 10px;
-  }
-  .search-bar {
-      width: 100%;
-      margin: 10px 0;
-  }
-  .search-bar input {
-      font-size: 18px;
-  }
-  .right-section {
-      margin-right: 0;
-      font-size: 20px;
-      justify-content: space-around;
-      width: 100%;
-      gap: 15px;
-  }
-}
 
-/* Small Mobiles */
-@media (max-width: 480px) {
+  .navbar {
+    display: none !important;
+  }
+
+  /* Logo small */
   .ecom {
-      font-size: 30px;
+    font-size: 20px;
   }
-  .explore {
-      font-size: 18px;
-  }
+  .explore { font-size: 10px;
+  color: #2874f0; }
+  .plus { font-size: 9px; color: #3ab831;}
+
+  /* Search Bar center small */
   .search-bar {
-      flex-direction: row;
-      padding: 4px;
+    width: 120px;
+    padding: 2px 6px;
+    border-radius: 12px;
   }
+
   .search-bar input {
-      font-size: 14px;
+    font-size: 12px;
   }
+
+  .search-icon {
+    font-size: 14px;
+  }
+
+  /* Right section small */
   .right-section {
-      flex-direction: column;
-      gap: 10px;
-      font-size: 18px;
+    gap: 12px;
+  }
+
+  .cart-icon {
+    font-size: 20px;
+  }
+
+  .cart-badge {
+    font-size: 9px;
+    padding: 1px 4px;
+  }
+
+  .user-circle {
+    width: 32px;
+    height: 32px;
+    font-size: 13px;
   }
 }

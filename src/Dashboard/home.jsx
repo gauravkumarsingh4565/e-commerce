@@ -7,9 +7,10 @@ import "./Home.css";
 const Home = () => {
   return (
     <div>
-      <Navbar/>
-      <Category/>
+      {/* <Navbar/> */}
+      
       <Banner/>
+      <Category/>
       <BestDealForMobile/>
     </div>
   )

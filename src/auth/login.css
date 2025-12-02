@@ -32,7 +32,7 @@
 
 .email {
   text-align: left;
-  font-size: larger;
+  font-size: smaller;
   margin-top: 20px;
   margin-bottom: 10px;
 }
@@ -147,6 +147,12 @@ input {
   .social-login {
     justify-content: center;
   }
+}
+.error-message {
+  color: red;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  font-size: 14px;
 }
 
 /* For very small devices */

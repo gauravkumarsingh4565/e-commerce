@@ -1,143 +1,131 @@
-/* ✅ Global Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.navbar {
+  width: 100%;
+  background-color: #dcebf3;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 15px 20px; */
+  gap: 40px;
+}
+
+.navbar .logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.navbar .menu {
+  display: flex;
+  gap: 25px;
+}
+
+.navbar .menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.category-container {
+  display: flex;
+  justify-content: center;
+  gap: 120px;
+  /* padding: 20px; */
+  flex-wrap: wrap;
+}
+
+.category-item {
+  flex: 1 1 150px;
+  max-width: 200px;
+  text-align: center;
+  background: #f8f8f8;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.banner-container {
+  width: 100%;
+  position: relative;
+}
+
+.banner-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.best-deals {
+  padding: 20px;
+}
+
+.deal-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.deal-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 15px;
+}
+
+@media (max-width: 1024px) {
+  .deal-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
-  
-  body {
-    font-family: Arial, sans-serif;
-  }
-  
-  /* ✅ Home Page Container */
-  .home-container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-  
-  /* ✅ Navbar */
+}
+
+@media (max-width: 768px) {
   .navbar {
-    width: 100%;
-    background-color: #054c70;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /* padding: 15px 20px; */
-    gap: 40px;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
-  .navbar .logo {
-    font-size: 20px;
-    font-weight: bold;
-  }
-  
   .navbar .menu {
-    display: flex;
-     gap: 25px; 
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
   }
-  
-  .navbar .menu a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-  }
-  
-  /* ✅ Category Section */
+
   .category-container {
-    display: flex;
-    justify-content: center;
-    gap: 150px;
-    /* padding: 20px; */
-    flex-wrap: wrap; /* Important for mobile */
+    gap: 10px;
   }
-  
-  .category-item {
-    flex: 1 1 150px;
-    max-width: 200px;
-    text-align: center;
-    background: #f8f8f8;
-    padding: 10px;
-    border-radius: 8px;
-    cursor: pointer;
-  }
-  
-  /* ✅ Banner Section */
-  .banner-container {
-    width: 100%;
-    position: relative;
-  }
-  
-  .banner-container img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-  }
-  
-  /* ✅ Best Deals Section */
-  .best-deals {
-    padding: 20px;
-  }
-  
+
   .deal-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
   }
-  
-  .deal-card {
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    padding: 15px;
+}
+
+@media (max-width: 480px) {
+  .navbar .logo {
+    font-size: 18px;
   }
-  
-  /* ✅ Responsive CSS */
-  
-  /* Tablets */
-  @media (max-width: 1024px) {
-    .deal-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
+
+  .navbar .menu a {
+    font-size: 14px;
   }
-  
-  /* Mobiles */
-  @media (max-width: 768px) {
-    .navbar {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .navbar .menu {
-      flex-direction: column;
-      gap: 10px;
-      margin-top: 10px;
-    }
-  
-    .category-container {
-      gap: 10px;
-    }
-  
-    .deal-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
+
+  .deal-grid {
+    grid-template-columns: 1fr;
   }
-  
-  /* Small Mobiles */
-  @media (max-width: 480px) {
-    .navbar .logo {
-      font-size: 18px;
-    }
-  
-    .navbar .menu a {
-      font-size: 14px;
-    }
-  
-    .deal-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-  
+}

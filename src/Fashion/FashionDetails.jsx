@@ -33,8 +33,8 @@ const FashionDetails = () => {
 
   return (
     <>
-      <Navbar />
-      <Category />
+      {/* <Navbar /> */}
+      {/* <Category /> */}
       <div className="fashion-container">
         <section>
           <h2>Men's Fashion</h2>
