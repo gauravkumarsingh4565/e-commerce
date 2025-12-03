@@ -30,11 +30,7 @@ const Banner = () => {
             <img
                 src={img}
                 alt={`Banner ${index}`}
-                style={{
-                  width: "100%",
-                  height: "400px",
-                  objectFit: "cover",
-                }}
+               className="banner-image"
               />
           </div>
         ))}
